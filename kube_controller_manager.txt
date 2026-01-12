@@ -1,0 +1,8 @@
+Kube control manger
+There are many. But below 2 we can see how it functions
+1. Node controller 
+   a. Gets the status of the node through kube-API server.
+   b. checks every 5 s. Node Monitor grace period is for 40s. If unreachable after 40s it will give a comeback period of 5 m. 
+   
+2. Replication controller
+   a. This will make sure the no of replicas for a pod are all up and running.
