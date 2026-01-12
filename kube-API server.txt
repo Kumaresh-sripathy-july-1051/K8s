@@ -1,0 +1,12 @@
+																		
+Kube api-server
+
+1. kube-API server is responsible for below. It serves as a manager in the cluster.
+                  a. Authenticate user
+				  b. Validate request
+				  c. Retrieve data
+				  d. Update ETCD
+				  e. Communication with Scheduler 
+				  f. kubelet
+				  
+													
