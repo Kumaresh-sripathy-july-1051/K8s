@@ -1,0 +1,12 @@
+															
+															
+															ETCD
+															
+	1. Relational database - Has schema, More space, More time to process.
+	2. Document store - No schema, Add informations as needed, Comparitively lesser process time
+	3. Key value store - keys and values, No extra info, super fast process time - We use this in ETCD - Always listens to port 2379
+	
+	ETCD:
+	
+	1. The data are stored on ETCD pod which is under kube-system namespace as key values.
+	
