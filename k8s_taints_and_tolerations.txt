@@ -1,0 +1,27 @@
+1. Taints and tolerance are to schedule and restrict the pod to the nodes
+Taint - Node 
+Toleration - pods
+" kubectl taint nodes <node-name> key=value:taint-effect "
+- taint-effect - No-schedule - dont schedule the pod if the tolerate is not applied.
+- taint-effect - PreferNoSchedule - this will max avoid the pod with the tolerate if not then it will accept.
+- taint-effect - NoExecute - This will only restrict the new pods with the tolerate and not the similar pods which was already in the node with no tolerate applied.
+2. pod-definition.yml
+apiVersion: v1
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+kind: Pod
+metadata: 
+ name: mypod
+ labels
+    app: myapp
+	type: front-end
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+	
+  tolerations:
+  - key: "app"
+    operator: "Equal"
+	value: "blue"
+	effect: "NoSchedule"
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

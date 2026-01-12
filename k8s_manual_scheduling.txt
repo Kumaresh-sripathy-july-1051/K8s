@@ -1,0 +1,14 @@
+kubectl get pods -n kube-system - to check what are all the components in k8s running in that cluster
+
+apiVersion: v1
+kind: Pod 
+metadata: 
+  name: nginx
+spec: 
+  nodeName: node01
+  containers:
+  - image: nginx
+    name: nginx
+	
+kubectl replace --force -f nginx.yaml - this will delete the yaml and recreate the yaml with the latest update.
+kubectl get pods --watch - to watch and update if there is any change in the pods status

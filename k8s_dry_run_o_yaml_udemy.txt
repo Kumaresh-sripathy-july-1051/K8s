@@ -1,0 +1,15 @@
+kubectl run --image=nginx nginx - to create and run pod command
+kubectl run --image=nginx nginx --dry-run=client -o yaml - Generate POD manifest file (-o yaml). Dont create it(--dry-run)
+kubectl run --help
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test
+1. kubectl run --image=nginx:alphine nginx-pod - correct
+2. kubectl run --image=redis:alphine redis --labels="tier=db" - didnt know
+3. kubectl expose deployment redis-service --image=redis --port=6379 - wrong 
+3. kubectl expose pod redis --port 6379 --name redis-service - correct
+4. kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3 - correct
+5. kubectl run custom-nginx --image=nginx --port=8080 - partially correct
+6. kubectl create namespace dev-ns - didnt know
+7. kubectl create deployment redis-deploy --image=redis --replicas=2 -n dev-ns - correct
+8. kubectl run httpd --image=httpd:alphine --port=80 --expose=true - dont knw 

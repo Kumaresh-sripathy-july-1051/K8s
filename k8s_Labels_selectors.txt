@@ -1,0 +1,1 @@
+kubectl get pod --selector app=App1 - This will select the pod with the selector app=App1
