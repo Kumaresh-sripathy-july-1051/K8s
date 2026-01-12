@@ -1,0 +1,7 @@
+Kubelet
+1. Kubelet is the captain of the ship which moves the pods to the nodes. 
+2. This will have the information of the pods in the nodes. It will not decide which pod goes to which node. It will be done by kube-scheduler
+
+
+Kube-proxy
+1. It is the component associated with pods to communicate with the service which creates the communication between 2 pods. Ex. If the app pod wants to communicate with the DB pod, there is a service which will be assigned with a IP address. Now this service will send the info to and fro to the app & db pod through kube-proxy.
