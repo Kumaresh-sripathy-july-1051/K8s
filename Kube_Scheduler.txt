@@ -1,2 +1,0 @@
-Kube Scheduler
-1. This will decide which pod goes to which node based on various factors.
